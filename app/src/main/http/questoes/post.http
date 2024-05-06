@@ -1,0 +1,7 @@
+POST https://8080-gabrielcpai-j2projetomo-j1uscua2c7e.ws-us110.gitpod.io/questoes
+Content-Type: application/json
+
+{
+    "enunciado": "Questão de Teste",
+    "categoria": {"id": 1}
+}
