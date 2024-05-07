@@ -24,6 +24,7 @@ public class QuestaoController {
     @Autowired
     private QuestaoRepository questoesRepo;
 
+    @Autowired
     private CategoriaRepository categoriaRepo;
 
     @GetMapping
@@ -35,7 +36,7 @@ public class QuestaoController {
     public Questao post(@RequestBody Questao questao) {
         if(!categoriaRepo.existsById(questao.getCategoria().getId())){
             throw new ResponseStatusException(
-                HttpStatus.BAD_REQUEST, "Categoria vinculada nao encontrada"
+                HttpStatus.BAD_REQUEST, "Categoria vinculada não encontrada"
             );
         }
         return questoesRepo.save(questao);
@@ -51,12 +52,12 @@ public class QuestaoController {
         }
         if(!categoriaRepo.existsById(questao.getCategoria().getId())){
             throw new ResponseStatusException(
-                HttpStatus.BAD_REQUEST, "Categoria vinculada nao encontrada"
+                HttpStatus.BAD_REQUEST, "Categoria vinculada não encontrada"
             );
         }
         result.get().setEnunciado(questao.getEnunciado());
         result.get().setCategoria(questao.getCategoria());
-
+        
         return questoesRepo.save(result.get());
     }
 

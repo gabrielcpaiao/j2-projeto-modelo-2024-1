@@ -1,13 +1,22 @@
-@baseUrl = https://8080-gabrielcpai-j2projetomo-j1uscua2c7e.ws-us110.gitpod.io/questoes
+@baseUrl = https://8080-marcoweb-j2projetomodel-wsvoib82jkw.ws-us110.gitpod.io
 
-##
-GET {{{{baseUrl}}}}
+###
+GET {{baseUrl}}/questoes
 
-##
-PUT {{{baseUrl}}}/1
+###
+POST {{baseUrl}}/questoes
 Content-Type: application/json
 
 {
-    "enunciado": "Questão de Teste Alterada",
-    "categoria": {"id": 1}
+    "enunciado" : "Questão de Teste",
+    "categoria" : {"id" : 1}
+}
+
+###
+PUT {{baseUrl}}/questoes/1
+Content-Type: application/json
+
+{
+    "enunciado" : "Questão de Teste Alterada",
+    "categoria" : {"id" : 1}
 }
