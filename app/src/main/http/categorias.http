@@ -1,4 +1,4 @@
-@baseUrl = https://8080-marcoweb-j2projetomodel-wsvoib82jkw.ws-us110.gitpod.io
+@baseUrl = https://8080-gabrielcpai-j2projetomo-brm07dbor3y.ws-us110.gitpod.io
 
 ###
 GET {{baseUrl}}/categorias
